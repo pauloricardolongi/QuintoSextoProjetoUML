@@ -7,18 +7,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import entities.Funcionario;
+
 public class Program {
 
 	public static void main(String[] args) {
 
-		List<String> list = new ArrayList<>();
+		List<Funcionario> list = new ArrayList<>();
 		String path = "C:\\circular\\in.txt";
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-			String name = br.readLine();
-			while (name != null) {
-				list.add(name);
-				name = br.readLine();
+			String funcionarioCsv  = br.readLine();
+			while (funcionarioCsv != null) {
+				String[]campos= funcionarioCsv.split(",");
+				
+				list.add(new Funcionario(campos[0],Double.parseDouble(campos[1])));
+				funcionarioCsv = br.readLine();
 			}
 			Collections.sort(list);
 			for (String s : list) {
