@@ -27,9 +27,10 @@ public class Funcionario implements Comparable<Funcionario> {
 	}
 
 	@Override
-	public int compareTo(Funcionario o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Funcionario outro) {
+		
+		//comparar um objeto com outro
+		return nome.compareTo(outro.getNome());
 	}
 	
 	
