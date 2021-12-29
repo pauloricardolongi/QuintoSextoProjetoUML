@@ -30,7 +30,7 @@ public class Funcionario implements Comparable<Funcionario> {
 	public int compareTo(Funcionario outro) {
 		
 		//comparar um objeto com outro
-		return nome.compareTo(outro.getNome());
+		return salario.compareTo(outro.getSalario());
 	}
 	
 	
