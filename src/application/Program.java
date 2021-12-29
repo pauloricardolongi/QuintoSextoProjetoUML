@@ -25,8 +25,8 @@ public class Program {
 				funcionarioCsv = br.readLine();
 			}
 			Collections.sort(list);
-			for (String s : list) {
-				System.out.println(s);
+			for (Funcionario func : list) {
+				System.out.println(func.getNome() + " , " + func.getSalario());
 			}
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
